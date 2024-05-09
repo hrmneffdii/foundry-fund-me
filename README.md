@@ -1,66 +1,17 @@
-## Foundry
+## Foundry Found Me Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+### 1. Features
 
-Foundry consists of:
+### 2. Concepts
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Here, i'm impelementing about some testing manually in directory `test`, there is many component function such as :
 
-## Documentation
+- setUp:
+  This function automatically run first in testing. it create initial contract that would be checked after that.
 
-https://book.getfoundry.sh/
+-
 
-## Usage
+### 3. Tips and Tricks
 
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+forge test -vvv --fork-url $RPC_URL , using test within alchemy env
+forge coverage --fork-url $RPC_URL, using testing as well as analyzing the entire of code.
