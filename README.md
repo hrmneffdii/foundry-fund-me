@@ -8,10 +8,14 @@ explanation
 
 Here, i'm impelementing about some testing manually in directory `test`, there is many component function such as :
 
-- setUp:
-  This function automatically run first in testing. it create initial contract that would be checked after that.
+- Unit Testing :
 
--
+  Unit testing is a process of testing individual components of code to ensure that they function as expected. This testing involves checking the functionality of the code, as well as any support libraries it uses. The purpose of unit testing is to identify and fix any issues with the code components so that they perform at their best.
+
+- Integration Testing :
+- Mock Agregator :
+
+  The Mock agregator is intended to create a fake contract to replace a real agregator(that runs in testnet or mainnet).it can be running in a local anvil environment.
 
 ### 3. Tips and Tricks
 
@@ -24,9 +28,9 @@ forge snapshot, to find information about gas cost
 
 cast storage address_contact `slot_id`, it can return the 2nd slot of storage
 
- // What can we do to work with addressses outside the system?
-    // 1. Unit - Testing a specific part of our code
-    // 2. Integration - Testing how our code works with other parts of our code
-    // 3. Forked - Testing our code on a simulated real environment
-    // 4. Staging - Testing our code on a real environment that is not production
+What can we do to work with addressses outside the system?
 
+1. Unit - Testing a specific part of our code
+2. Integration - Testing how our code works with other parts of our code
+3. Forked - Testing our code on a simulated real environment
+4. Staging - Testing our code on a real environment that is not production

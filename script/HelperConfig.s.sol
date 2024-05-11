@@ -39,10 +39,6 @@ contract HelperConfig is Script {
     }
 
     function getAnvilEthConfig() public returns (NetworkConfig memory) {
-        // mock price feed
-        // 1. Deploy MockV3Aggregator
-        // 2. return MockV3Aggregator address
-
         // if we have active network before
         if (activeNetwork.priceFeed != address(0)) {
             return activeNetwork;
@@ -53,7 +49,6 @@ contract HelperConfig is Script {
         vm.stopBroadcast();
 
         NetworkConfig memory config = NetworkConfig({priceFeed: address(mockV3Aggregator)});
-
         return config;
     }
 }
