@@ -22,19 +22,16 @@ contract FundMe {
         i_owner = msg.sender;
     }
 
-    // tested
     function fund() public payable {
         require(msg.value.getConversionRate(s_priceFeed) >= MINIMUM_USD, "You need to spend more ETH!");
         s_addressToAmountFunded[msg.sender] += msg.value;
         s_funders.push(msg.sender);
     }
 
-    // tested
     function getVersion() public view returns (uint256) {
         return s_priceFeed.version();
     }
 
-    // tested
     modifier onlyOwner() {
         if (msg.sender != i_owner) revert FundMe__NotOwner();
         _;
@@ -68,12 +65,10 @@ contract FundMe {
         return s_addressToAmountFunded[_address];
     }
 
-    // tested
     function getFunders(uint256 _index) external view returns (address) {
         return s_funders[_index];
     }
 
-    // tested
     function getOwner() external view returns (address) {
         return i_owner;
     }
