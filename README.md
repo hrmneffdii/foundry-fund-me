@@ -1,6 +1,6 @@
 # Foundry Found Me Dummy Project
 
-![images](./images/charity.jpeg)
+![images](./images/charity.png)
 
 [source image ](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.1stformations.co.uk%2Fblog%2Fhow-does-hmrc-tax-uk-companys-charitable-donations%2F&psig=AOvVaw0eNm8GDo1TvvWHZCaIFKnI&ust=1715591272851000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwj8jLrU4YeGAxU59qACHV8CA8gQr4kDegQIARBn)
 
@@ -12,11 +12,12 @@ Fund Me operates on Ethereum's blockchain, ensuring decentralization and immutab
 
 ### 1. Features
 
-Within this smart contract, many functionalities that can be offered, such as : 
-  - This contract can receive ether from someone through functionality itself. 
-  - It also can withdraw from this contract to the owner and ensure that security is guaranteed.
-  - It is also covered by the script for deloployment in testnet or mainnet, and test for unit testing for the professionality of the project
-  
+Within this smart contract, many functionalities that can be offered, such as :
+
+- This contract can receive ether from someone through functionality itself.
+- It also can withdraw from this contract to the owner and ensure that security is guaranteed.
+- It is also covered by the script for deloployment in testnet or mainnet, and test for unit testing for the professionality of the project
+
 ### 2. Concepts
 
 Here, i'm impelementing about some testing manually in directory `test`, there is many component function such as :
@@ -38,24 +39,23 @@ Here, i'm impelementing about some testing manually in directory `test`, there i
 If you are in a phase of development, you have to use the local chain as much as possible to avoid the alchemy node connected to Sepolia ETH. Is it possible to develop a contract that needs another contract in Sepolia eth? yaa it's impossible. well, to solve this problem, we need a mock or we call it a fake contract, and deploy it on an anvil environment.
 
 There is many commands which important for this project:
-  - using test within alchemy env
 
+- using test within alchemy env
 
-    `forge test -vvv --fork-url $RPC_URL `
+  `forge test -vvv --fork-url $RPC_URL `
 
-  - using testing as well as analyzing the eentire of code.
+- using testing as well as analyzing the eentire of code.
 
-    `forge coverage --fork-url $RPC_URL`
+  `forge coverage --fork-url $RPC_URL`
 
-  - , using command script to deploy onchain through RPC_URL, if we don't include rpc as well as private key, we actually do at local chain in anvil. don't use the env with account real money
-    
-    `forge script script/DeployFundMe.s.sol --rpc-url $RPC_URL_ANVIL --private-key $PRIVATE_KEY --broadcast`
+- , using command script to deploy onchain through RPC_URL, if we don't include rpc as well as private key, we actually do at local chain in anvil. don't use the env with account real money
 
-  - to find information about gas cost
-    `forge snapshot`
+  `forge script script/DeployFundMe.s.sol --rpc-url $RPC_URL_ANVIL --private-key $PRIVATE_KEY --broadcast`
 
-  - cast storage address_contact `slot_id` it can return the 2nd slot of storage
+- to find information about gas cost
+  `forge snapshot`
 
+- cast storage address_contact `slot_id` it can return the 2nd slot of storage
 
 #### What can we do to work with addressses outside the system?
 
